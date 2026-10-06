@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+import Navbar from './components/Navbar';
+import Introduccion from './components/Introduccion';
+import Proyectos from './components/Proyectos';
+import Noticias from './components/Noticias';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+
+      <Introduccion
+        nombre="Pedro Hacker"
+        bio="Estudiante de Ingeniería en Informática y entusiasta de la tecnología."
+        githubUrl="https://github.com/pedrohacker20"
+        imagen="https://pedrohacker20.github.io/138630362.png"
+      />
+
+      <Proyectos />
+
+      <Noticias />
     </div>
   );
 }

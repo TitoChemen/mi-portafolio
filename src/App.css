@@ -1,38 +1,264 @@
+/* ================================
+   ESTILOS GENERALES
+================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
 .App {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.12), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.10), transparent 30%),
+    #0f172a;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  background: rgba(15, 23, 42, 0.92) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  color: #cbd5e1 !important;
+  margin-left: 10px;
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #60a5fa !important;
+  transform: translateY(-1px);
+}
+
+/* ================================
+   SECCIONES
+================================ */
+
+section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+section h2 {
+  color: #f8fafc;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+/* ================================
+   INTRODUCCIÓN
+================================ */
+
+#inicio {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+}
+
+#inicio h2 {
+  font-size: 3.5rem;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+#inicio h2::after {
+  margin: 12px 0 0;
+}
+
+#inicio p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+#inicio img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border: 4px solid rgba(96, 165, 250, 0.5);
+  box-shadow:
+    0 0 35px rgba(59, 130, 246, 0.25);
+}
+
+/* ================================
+   TARJETAS
+================================ */
+
+.card {
+  height: 100%;
+  background: rgba(30, 41, 59, 0.75) !important;
+  border: 1px solid rgba(148, 163, 184, 0.15) !important;
+  border-radius: 18px !important;
+  color: #e2e8f0 !important;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(96, 165, 250, 0.45) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-title {
+  color: #f8fafc !important;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  color: #94a3b8 !important;
+  line-height: 1.7;
+}
+
+/* ================================
+   BOTONES
+================================ */
+
+.btn {
+  border-radius: 10px !important;
+  padding: 10px 20px !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease !important;
+}
+
+.btn-primary {
+  border: none !important;
+  background: linear-gradient(135deg, #3b82f6, #6366f1) !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn-dark {
+  border: none !important;
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+}
+
+.btn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* ================================
+   NOTICIAS
+================================ */
+
+#noticias .text-muted {
+  color: #60a5fa !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ================================
+   FORMULARIOS
+================================ */
+
+input,
+textarea {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 10px !important;
+}
+
+input:focus,
+textarea:focus {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15) !important;
+}
+
+::placeholder {
+  color: #64748b !important;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  background: #020617;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  color: #64748b;
+  padding: 30px 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* ================================
+   RESPONSIVE
+================================ */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  #inicio {
+    text-align: center;
+  }
+
+  #inicio h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #inicio h2::after {
+    margin: 12px auto 0;
+  }
+
+  #inicio img {
+    width: 180px;
+    height: 180px;
+  }
+
+  section h2 {
+    font-size: 1.9rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* ================================ ANIMACIONES ================================ */ /* Aparición general de las secciones */ section { animation: fadeUp 0.8s ease both; } @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } } /* ================================ ANIMACIÓN DE LA INTRODUCCIÓN ================================ */ #inicio img { animation: floating 4s ease-in-out infinite; } @keyframes floating { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } } /* Brillo alrededor de la foto */ #inicio img { transition: box-shadow 0.4s ease, transform 0.4s ease; } #inicio img:hover { transform: translateY(-8px) scale(1.04); box-shadow: 0 0 25px rgba(59, 130, 246, 0.35), 0 0 60px rgba(99, 102, 241, 0.2); } /* ================================ TARJETAS ================================ */ .card { opacity: 0; animation: cardAppear 0.7s ease forwards; } .card:nth-child(1) { animation-delay: 0.1s; } .card:nth-child(2) { animation-delay: 0.2s; } .card:nth-child(3) { animation-delay: 0.3s; } @keyframes cardAppear { from { opacity: 0; transform: translateY(25px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } } /* ================================ EFECTO HOVER DE LAS TARJETAS ================================ */ .card::before { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 2px; background: linear-gradient( 90deg, transparent, #60a5fa, #8b5cf6, transparent ); transition: left 0.5s ease; } .card { position: relative; } .card:hover::before { left: 100%; } /* ================================ BOTONES ================================ */ .btn { position: relative; overflow: hidden; } .btn::after { content: ""; position: absolute; top: 0; left: -120%; width: 70%; height: 100%; background: rgba(255, 255, 255, 0.15); transform: skewX(-20deg); transition: left 0.5s ease; } .btn:hover::after { left: 140%; } /* ================================ NAVBAR ================================ */ .navbar-brand { transition: transform 0.25s ease, color 0.25s ease; } .navbar-brand:hover { transform: scale(1.04); color: #60a5fa !important; } /* ================================ LINKS ================================ */ .nav-link { position: relative; } .nav-link::after { content: ""; position: absolute; left: 50%; bottom: 2px; width: 0; height: 2px; border-radius: 10px; background: #60a5fa; transform: translateX(-50%); transition: width 0.25s ease; } .nav-link:hover::after { width: 70%; } /* ================================ TITULOS ================================ */ section h2 { animation: titleAppear 0.8s ease both; } @keyframes titleAppear { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } } /* ================================ REDUCIR ANIMACIONES SI EL USUARIO LO PREFIERE ================================ */ @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "titulo": "Implementación exitosa de microservicios con Spring Cloud",
+    "fecha": "2026-09-15",
+    "contenido": "Configuración completada de API Gateways y Eureka Server para optimizar la arquitectura del backend."
+  },
+  {
+    "id": 2,
+    "titulo": "Despliegue automatizado con Terraform y AWS",
+    "fecha": "2026-09-02",
+    "contenido": "Se levantó infraestructura en la nube utilizando contenedores Docker y pipelines automatizados."
+  }
+]
